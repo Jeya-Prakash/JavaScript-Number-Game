@@ -1,0 +1,192 @@
+<title>JavaScript | Guess the Number Game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        background: #fb887c;
+        color: #fff;
+    }
+
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: cursive;
+        font-weight: normal;
+    }
+
+    .tryDiv {
+        text-align: right;
+        margin-bottom: 20px;
+    }
+
+    .credits {
+        text-align: center;
+        margin-top: 35px;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    input, button {
+        padding: 12px;
+        background-color: #af271a;
+        border: none;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+        button[disabled] {
+            opacity: .3;
+            cursor: auto;
+        }
+
+    input {
+        background-color: #fff;
+        color: #af271a;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+        input:focus, button:focus {
+            outline: 0;
+        }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+
+    .container {
+        width: 500px;
+        max-width: 100%;
+        margin: 30px auto;
+        min-height: 310px;
+    }
+
+    .header {
+        margin: 20px auto;
+        padding: 12px;
+        text-align: center;
+        border: 5px dotted;
+    }
+
+    #newGame, #rightDiv, #wrongDiv, #infoDiv {
+        display: none;
+    }
+
+    #guessList, .gameOver, #wrongDiv, #rightDiv, #infoDiv {
+        margin-top: 20px;
+    }
+
+        #guessList span {
+            display: inline-block;
+            padding: 4px 10px;
+            border: 1px solid;
+            border-radius: 2px;
+            margin: 10px 10px 0 0;
+        }
+
+    .gameOver, #wrongDiv, #rightDiv, #infoDiv, #answerDiv {
+        padding: 8px 12px;
+        border-radius: 2px;
+        border: 1px solid;
+    }
+
+    #infoDiv, #tries {
+        background-color: #cef1fc;
+        color: #12718f;
+    }
+
+    #tries {
+        padding: 2px 8px;
+        border: 1px solid;
+        border-radius: 2px;
+        display: inline-block;
+    }
+
+    #wrongDiv, #guessList span, .gameOver {
+        background-color: #fee5e2;
+        color: #b50303;
+    }
+
+        #rightDiv, #guessList span.correct, #answerDiv {
+            background-color: #f1fbd1;
+            color: #488f06;
+        }
+
+    #answerDiv {
+        padding: 0px 10px 2px;
+        margin-left: 10px;
+        display: inline-block;
+        border: 1px dotted;
+    }
+
+    @media screen and (max-width: 479px) {
+        input, button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .header {
+            padding: 8px;
+        }
+
+        .container {
+            max-width: 95%;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .credits {
+            position: static;
+        }
+
+        input, button {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+</style>
+<div class="container">
+    <div class="header">
+        <h2>Guess the Number</h2>
+        <h4>
+            guess my number b/w 1 & 100.
+            <br /> Maximum Try : 10
+        </h4>
+    </div>
+    <div class="tryDiv">
+        Try(s) left:
+        <span id="tries">10</span>
+    </div>
+    <input id="ip" type="number" autofocus>
+    <button id="guessBtn">guess</button>
+    <button id="newGame">start new game</button>
+    <div id="infoDiv">
+        Enter a number b/w
+        <strong>1 & 100</strong>
+    </div>
+    <div id="guessList"></div>
+    <div id="rightDiv">Congrats ! Your guess is right.</div>
+    <div id="wrongDiv"></div>
+</div>
+<div class="credits">
+    View on
+    <a href="https://goo.gl/qcedtd" title="Source Code" style="color: #9c0f00;" target="_blank">Github</a>
+    <h3>
+        Made with
+        <svg style="vertical-align: middle!important;" width="16" height="16" viewBox="0 0 448 384">
+            <path fill="#c92a2a" d="M224 384c-4 0-8-1.5-11-4.5L57 229c-2-1.75-57-52-57-112C0 43.75 44.75 0 119.5 0c43.75 0 84.75 34.5 104.5 54 19.75-19.5 60.75-54 104.5-54C403.25 0 448 43.75 448 117c0 60-55 110.25-57.25 112.5L235 379.5c-3 3-7 4.5-11 4.5z"></path>
+        </svg> by
+        <a href="https://goo.gl/5uXVu2" title="Jeya Prakash GitHub Profile" target="_blank" style="color: #ca2b2b;">Jeya Prakash</a>
+    </h3>
+</div>
+<script src="https://rawgit.com/Jeya-Prakash/JavaScript-Number-Game/master/game.js"></script>
