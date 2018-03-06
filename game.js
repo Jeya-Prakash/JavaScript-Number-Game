@@ -12,6 +12,7 @@ var guess, n = Math.floor(Math.random() * 100) + 1,
 btn.addEventListener('click', function () {
     guess = ip.value;
     ip.focus();
+    window.scrollTo(0, window.innerHeight);
     if (guess >= 1 && guess <= 100) {
         ip.value = '';
         infoDiv.style.display = 'none';
@@ -46,6 +47,7 @@ newGame.addEventListener('click', function () {
     n = Math.floor(Math.random() * 100) + 1;
     ip.value = '';
     ip.focus();
+    window.scrollTo(0, window.innerHeight);
     tries.innerHTML = 10;
     guessList.innerHTML = '';
     this.style.display = 'none';
