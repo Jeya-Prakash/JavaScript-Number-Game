@@ -4,4 +4,4 @@ Guess the Number Game developed with JavaScript
 # Demo
 https://goo.gl/ScwHpx
 <br><br>
-[![JavaScript-Number-Game](/demo.jpg)](https://goo.gl/ScwHpx)
+[![JavaScript-Number-Game](/demo-pic.jpg)](https://goo.gl/ScwHpx)
