@@ -1,5 +1,6 @@
 <title>JavaScript | Guess the Number Game</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
 <style>
     body {
         background: #fb887c;
@@ -10,8 +11,9 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        font-family: cursive;
+        font-family: 'Patua One', cursive;
         font-weight: normal;
+        letter-spacing: 0.5px;
     }
 
     .tryDiv {
@@ -31,6 +33,7 @@
     }
 
     input, button {
+        font-size: 18px;
         padding: 12px;
         background-color: #af271a;
         border: none;
@@ -52,7 +55,8 @@
         cursor: pointer;
     }
 
-        input:focus, button:focus {
+        input:focus,
+        button:focus {
             outline: 0;
         }
 
@@ -65,7 +69,7 @@
     }
 
     .container {
-        width: 500px;
+        width: 570px;
         max-width: 100%;
         margin: 30px auto;
         min-height: 310px;
@@ -129,7 +133,7 @@
         border: 1px dotted;
     }
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 550px) {
         input, button {
             width: 100%;
             margin-bottom: 10px;
@@ -138,10 +142,6 @@
         .header {
             padding: 8px;
         }
-
-        .container {
-            max-width: 95%;
-        }
     }
 
     @media screen and (max-width: 767px) {
@@ -149,9 +149,12 @@
             position: static;
         }
 
-        input, button {
-            font-size: 18px;
+        input {
             text-align: center;
+        }
+
+        .container {
+            max-width: 95%;
         }
     }
 </style>
@@ -171,8 +174,7 @@
     <button id="guessBtn">guess</button>
     <button id="newGame">start new game</button>
     <div id="infoDiv">
-        Enter a number b/w
-        <strong>1 & 100</strong>
+        Enter a number b/w 1 & 100
     </div>
     <div id="guessList"></div>
     <div id="rightDiv">Congrats ! Your guess is right.</div>
@@ -180,7 +182,7 @@
 </div>
 <div class="credits">
     View on
-    <a href="https://goo.gl/qcedtd" title="Source Code" style="color: #9c0f00;" target="_blank">Github</a>
+    <a href="https://goo.gl/qcedtd" title="Source Code" style="color: #000;" target="_blank">Github</a>
     <h3>
         Made with
         <svg style="vertical-align: middle!important;" width="16" height="16" viewBox="0 0 448 384">
